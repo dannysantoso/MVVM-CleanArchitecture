@@ -12,6 +12,7 @@ import CoreData
 class LocaleDataSources {
     
     func getGames() -> Observable<[GameEntity]> {
+        print("Local Data Sources")
         return Observable<[GameEntity]>.create { observer in
             do {
                 let request: NSFetchRequest<GameEntity> = GameEntity.fetchRequest()

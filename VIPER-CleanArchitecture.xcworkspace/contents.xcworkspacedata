@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:VIPER-CleanArchitecture.xcodeproj">
+      location = "group:/Users/dannysantoso/Documents/Source Code/iOS/VIPER-CleanArchitecture/VIPERCleanArchitecture.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

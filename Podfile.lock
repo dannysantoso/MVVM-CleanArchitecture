@@ -1,6 +1,10 @@
 PODS:
   - Alamofire (5.4.0)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
   - SDWebImage (5.10.0):
     - SDWebImage/Core (= 5.10.0)
   - SDWebImage/Core (5.10.0)
@@ -10,7 +14,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - RxBlocking
   - RxSwift
+  - RxTest
   - SDWebImage
   - SDWebImageSwiftUI
   - SwiftyJSON
@@ -18,18 +24,22 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - RxBlocking
     - RxSwift
+    - RxTest
     - SDWebImage
     - SDWebImageSwiftUI
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: c337a19fcc17ac6f25f7287687c6c82f3fb5c2fe
+PODFILE CHECKSUM: 8a4768643b0a045bb4a3704c3c983fc42511f44a
 
 COCOAPODS: 1.9.3

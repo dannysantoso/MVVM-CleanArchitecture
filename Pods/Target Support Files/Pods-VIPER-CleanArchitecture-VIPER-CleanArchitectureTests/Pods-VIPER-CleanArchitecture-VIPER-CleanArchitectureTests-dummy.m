@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_VIPER_CleanArchitecture_VIPER_CleanArchitectureTests : NSObject
+@end
+@implementation PodsDummy_Pods_VIPER_CleanArchitecture_VIPER_CleanArchitectureTests
+@end
