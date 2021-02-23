@@ -14,7 +14,9 @@ struct HomeView: View {
         NavigationView {
             List {
                 ForEach(homePresenter.gameData) { game in
-                    ListView(game: game)
+                    homePresenter.linkBuilder(gameDomain: game) {
+                        ListView(game: game)
+                    }   
                 }
             }.onAppear{
                 homePresenter.getGames()
@@ -26,6 +28,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(homePresenter: HomePresenter(homeInteractor: HomeInteractor(repository: Repository(remoteDataSources: RemoteDataSources(), localeDataSources: LocaleDataSources()))))
+        HomeView(homePresenter: HomePresenter(homeInteractor: HomeInteractor(repository: Repository(remoteDataSources: RemoteDataSources(), localeDataSources: LocaleDataSources())), homeRouter: HomeRouter()))
     }
 }

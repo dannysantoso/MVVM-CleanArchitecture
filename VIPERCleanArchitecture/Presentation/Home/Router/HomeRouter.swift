@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+
+class HomeRouter {
+    
+    func moveToDetailView(gameDomain: GameDomain) -> some View {
+        let detailInteractor = DetailInteractor(gameDomain: gameDomain)
+        let presenter = DetailPresenter(detailInteractor: detailInteractor)
+        return DetailView(detailPresenter: presenter)
+    }
+    
+}

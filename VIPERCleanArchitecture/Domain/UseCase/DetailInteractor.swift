@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+class DetailInteractor {
+    
+    var gameDomain: GameDomain
+    
+    init(gameDomain: GameDomain) {
+        self.gameDomain = gameDomain
+    }
+    
+    func getDetailGames() -> GameDomain{
+        return gameDomain
+    }
+    
+}

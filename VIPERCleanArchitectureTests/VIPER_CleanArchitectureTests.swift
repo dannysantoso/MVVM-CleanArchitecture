@@ -32,6 +32,11 @@ class VIPER_CleanArchitectureTests: XCTestCase {
 //            Recorded.completed(10)
 //        ]
         
+        for i in observer.events.first!.value.element! {
+            print(i)
+        }
+        
+//        XCTAssertEqual(observer.events.first!.value.element!.first?.name, "BioShock")
         XCTAssertNotNil(observer.events[0].value)
         XCTAssertNotNil(observer.events[1].value)
         XCTAssertEqual(observer.events.count, 2)

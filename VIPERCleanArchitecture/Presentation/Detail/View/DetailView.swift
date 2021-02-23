@@ -9,31 +9,36 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct DetailView: View {
+    
+    @ObservedObject var detailPresenter: DetailPresenter
+    
     var body: some View {
         NavigationView {
             VStack {
-                Image(systemName: "heart")
+                WebImage(url: URL(string: detailPresenter.gameDomain.image))
                     .resizable()
-                    .frame(width: 250, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .cornerRadius(20)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 300, height: 200, alignment: .center)
+                    .cornerRadius(15)
                     .padding(.bottom, 100)
-                GameTextContent(title: "Name :")
-                GameTextContent(title: "Rating :")
-                GameTextContent(title: "Released :")
+                GameTextContent(title: "Name :", content: detailPresenter.gameDomain.name)
+                GameTextContent(title: "Rating :", content: detailPresenter.gameDomain.rating)
+                GameTextContent(title: "Released :", content: detailPresenter.gameDomain.name)
                 Spacer()
             }
         }
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
-    }
-}
+//struct DetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailView(detailPresenter: <#DetailPresenter#>)
+//    }
+//}
 
 struct GameTextContent: View {
     var title: String
+    var content: String
     
     var body: some View {
         VStack {
@@ -42,7 +47,7 @@ struct GameTextContent: View {
                     .padding(.leading, 50)
                     .font(.system(size: 16, weight: .heavy, design: .default))
                 Spacer()
-                Text("Hello")
+                Text(content)
                     .padding(.trailing, 50)
             }.padding(.bottom, 20)
         }

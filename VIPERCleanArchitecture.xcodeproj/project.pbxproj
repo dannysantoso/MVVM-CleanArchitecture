@@ -29,6 +29,10 @@
 		E129691B25E26C39006BD4E0 /* LocaleDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129691A25E26C39006BD4E0 /* LocaleDataSources.swift */; };
 		E129691E25E26C86006BD4E0 /* CoreDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129691D25E26C86006BD4E0 /* CoreDataContext.swift */; };
 		E129693D25E2E14F006BD4E0 /* VIPER_CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129693C25E2E14F006BD4E0 /* VIPER_CleanArchitectureTests.swift */; };
+		E129699525E41E95006BD4E0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129699425E41E95006BD4E0 /* DetailView.swift */; };
+		E129699925E426B8006BD4E0 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129699825E426B8006BD4E0 /* DetailInteractor.swift */; };
+		E129699D25E4278D006BD4E0 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129699C25E4278D006BD4E0 /* HomeRouter.swift */; };
+		E12969A325E4282E006BD4E0 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12969A225E4282E006BD4E0 /* DetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		E129693A25E2E14F006BD4E0 /* VIPERCleanArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPERCleanArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E129693C25E2E14F006BD4E0 /* VIPER_CleanArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPER_CleanArchitectureTests.swift; sourceTree = "<group>"; };
 		E129693E25E2E14F006BD4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E129699425E41E95006BD4E0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E129699825E426B8006BD4E0 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		E129699C25E4278D006BD4E0 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E12969A225E4282E006BD4E0 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +171,7 @@
 		E12968D825E14A9A006BD4E0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E129698B25E41366006BD4E0 /* Detail */,
 				E12968DC25E14AD2006BD4E0 /* Home */,
 			);
 			path = Presentation;
@@ -191,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E129691725E2484B006BD4E0 /* HomeInteractor.swift */,
+				E129699825E426B8006BD4E0 /* DetailInteractor.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -226,6 +236,7 @@
 		E12968DF25E14B00006BD4E0 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				E129699C25E4278D006BD4E0 /* HomeRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -304,6 +315,31 @@
 				E129693E25E2E14F006BD4E0 /* Info.plist */,
 			);
 			path = VIPERCleanArchitectureTests;
+			sourceTree = "<group>";
+		};
+		E129698B25E41366006BD4E0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E12969A125E4281D006BD4E0 /* View */,
+				E12969A025E42811006BD4E0 /* Presenter */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E12969A025E42811006BD4E0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E12969A225E4282E006BD4E0 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E12969A125E4281D006BD4E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E129699425E41E95006BD4E0 /* DetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,6 +529,10 @@
 			files = (
 				E129690425E19BE9006BD4E0 /* RemoteDataSources.swift in Sources */,
 				E12968FB25E18149006BD4E0 /* HomePresenter.swift in Sources */,
+				E129699525E41E95006BD4E0 /* DetailView.swift in Sources */,
+				E12969A325E4282E006BD4E0 /* DetailPresenter.swift in Sources */,
+				E129699925E426B8006BD4E0 /* DetailInteractor.swift in Sources */,
+				E129699D25E4278D006BD4E0 /* HomeRouter.swift in Sources */,
 				E12968C125E14A83006BD4E0 /* AppDelegate.swift in Sources */,
 				E129691B25E26C39006BD4E0 /* LocaleDataSources.swift in Sources */,
 				E12968C325E14A83006BD4E0 /* SceneDelegate.swift in Sources */,
