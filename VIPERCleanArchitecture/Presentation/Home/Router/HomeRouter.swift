@@ -11,7 +11,7 @@ import SwiftUI
 class HomeRouter {
     
     func moveToDetailView(gameDomain: GameDomain) -> some View {
-        let detailInteractor = DetailInteractor(gameDomain: gameDomain)
+        let detailInteractor = Injection.init().provideDetail(gameDomain: gameDomain)
         let presenter = DetailPresenter(detailInteractor: detailInteractor)
         return DetailView(detailPresenter: presenter)
     }

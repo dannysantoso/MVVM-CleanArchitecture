@@ -12,9 +12,15 @@ class Repository {
     let remoteDataSources: RemoteDataSources
     let localeDataSources: LocaleDataSources
     
+    typealias RepoInstances = (RemoteDataSources, LocaleDataSources) -> Repository
+    
     init(remoteDataSources: RemoteDataSources, localeDataSources: LocaleDataSources) {
         self.remoteDataSources = remoteDataSources
         self.localeDataSources = localeDataSources
+    }
+    
+    static let sharedInstance: RepoInstances = { remoteRepo, localeRepo in
+        return Repository(remoteDataSources: remoteRepo, localeDataSources: localeRepo)
     }
     
     func getGames() -> Observable<[GameDomain]> {

@@ -16,7 +16,7 @@ class VIPER_CleanArchitectureTests: XCTestCase {
     let disposeBag = DisposeBag()
     
     override func setUp() {
-        homeInteractor = HomeInteractor(repository: Repository(remoteDataSources: RemoteDataSources(), localeDataSources: LocaleDataSources()))
+        homeInteractor = Injection.init().provideHome()
     }
     
     func testEventGetGames() {

@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class RemoteDataSources {
     
+    static let sharedInstance: RemoteDataSources =  RemoteDataSources()
+    
     func getGames() -> Observable<[GameResponse]> {
         return Observable<[GameResponse]>.create { observer in
             if let url = URL(string: Endpoint.Get.gameList.url) {

@@ -11,6 +11,8 @@ import CoreData
 
 class LocaleDataSources {
     
+    static let sharedInstance: LocaleDataSources =  LocaleDataSources()
+    
     func getGames() -> Observable<[GameEntity]> {
         print("Local Data Sources")
         return Observable<[GameEntity]>.create { observer in

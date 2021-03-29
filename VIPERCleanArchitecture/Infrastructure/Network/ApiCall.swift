@@ -21,8 +21,7 @@ enum Endpoint {
         
         public var url: String {
             switch self {
-            case .gameList:
-                return "\(ApiCall.baseURL)games"
+            case .gameList: return "\(ApiCall.baseURL)games"
             }
         }
     }

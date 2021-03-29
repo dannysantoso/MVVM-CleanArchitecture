@@ -28,6 +28,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(homePresenter: HomePresenter(homeInteractor: HomeInteractor(repository: Repository(remoteDataSources: RemoteDataSources(), localeDataSources: LocaleDataSources())), homeRouter: HomeRouter()))
+        HomeView(homePresenter: HomePresenter(homeInteractor: Injection.init().provideHome(), homeRouter: HomeRouter()))
     }
 }

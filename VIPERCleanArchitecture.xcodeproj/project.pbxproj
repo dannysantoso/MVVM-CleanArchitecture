@@ -33,6 +33,7 @@
 		E129699925E426B8006BD4E0 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129699825E426B8006BD4E0 /* DetailInteractor.swift */; };
 		E129699D25E4278D006BD4E0 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129699C25E4278D006BD4E0 /* HomeRouter.swift */; };
 		E12969A325E4282E006BD4E0 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12969A225E4282E006BD4E0 /* DetailPresenter.swift */; };
+		E15DCA7F26122FF1005DFABC /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DCA7E26122FF1005DFABC /* Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		E129699825E426B8006BD4E0 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		E129699C25E4278D006BD4E0 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		E12969A225E4282E006BD4E0 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		E15DCA7E26122FF1005DFABC /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		E12968BF25E14A83006BD4E0 /* VIPERCleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				E15DCA7A26122F12005DFABC /* DI */,
 				E12968E325E14F4C006BD4E0 /* Infrastructure */,
 				E12968DA25E14ABA006BD4E0 /* Data */,
 				E12968D925E14AAA006BD4E0 /* Domain */,
@@ -340,6 +343,14 @@
 				E129699425E41E95006BD4E0 /* DetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E15DCA7A26122F12005DFABC /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E15DCA7E26122FF1005DFABC /* Injection.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +558,7 @@
 				E129690125E19B76006BD4E0 /* GameResponse.swift in Sources */,
 				E129690B25E1AE1D006BD4E0 /* Repository.swift in Sources */,
 				E129691825E2484B006BD4E0 /* HomeInteractor.swift in Sources */,
+				E15DCA7F26122FF1005DFABC /* Injection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
